@@ -897,8 +897,6 @@ class CreateJobParameters:
             data['beaker']['ks_append'] = self.kickstart
             data['beaker']['kernel_options'] = self.kickstart.get('kernel_options')
             data['beaker']['kernel_options_post'] = self.kickstart.get('kernel_options_post')
-        if self.beaker_job_owner:
-            data['beaker']['beaker_job_owner'] = self.beaker_job_owner
 
         return data
 
