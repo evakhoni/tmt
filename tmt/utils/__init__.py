@@ -4199,9 +4199,7 @@ def remove_color(text: str) -> str:
     return re.sub(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])', '', text)
 
 
-def generate_runs(
-    path: Path, id_: tuple[str, ...], all_: Optional[bool] = False
-) -> Iterator[Path]:
+def generate_runs(path: Path, id_: tuple[str, ...], all_: bool = False) -> Iterator[Path]:
     """
     Generate absolute paths to runs from path
     """

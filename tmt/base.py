@@ -4552,7 +4552,7 @@ class Clean(tmt.utils.Common):
             return self._clean_workdir(last_run.workdir)
         all_workdirs = list(tmt.utils.generate_runs(self.workdir_root, id_, all_=True))
         if keep is not None:
-            # Sort by modify time of the workdirs and keep the newest workdirs
+            # Sort by create time of the workdirs and keep the newest workdirs
             all_workdirs.sort(key=lambda workdir: workdir.stat().st_ctime, reverse=True)
             all_workdirs = all_workdirs[keep:]
 
